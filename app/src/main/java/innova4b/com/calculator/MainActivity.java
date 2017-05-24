@@ -22,8 +22,12 @@ public class MainActivity extends AppCompatActivity {
     public void numericButtonClicked(View view){
         Button numericButton = (Button) view;
         String numberStr = numericButton.getText().toString();
-        screenTextView.setText(screenTextView.getText() + numberStr);
 
+        String textToSet = screenTextView.getText() + numberStr;
+        if (screenTextView.getText().equals("0")){
+            textToSet = numberStr;
+        }
+        screenTextView.setText(textToSet);
     }
 
 
