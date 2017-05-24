@@ -15,15 +15,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/screen"
             android:layout_width="match_parent"
-            android:layout_height="103dp"
-            android:text="TextView" />
+            android:layout_height="67dp"
+            android:paddingTop="5dp"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="315dp"
+        android:layout_height="202dp"
         android:layout_column="0"
         android:layout_row="6">
 
@@ -67,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_row="29"
+                android:onClick="numericButtonClicked"
                 android:text="9" />
 
             <Button
@@ -95,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="2"
+                android:onClick="numericButtonClicked"
                 android:text="4" />
 
             <Button
@@ -103,12 +110,14 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_row="29"
+                android:onClick="numericButtonClicked"
                 android:text="5" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="numericButtonClicked"
                 android:text="6" />
 
             <Button
@@ -117,6 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="2"
                 android:layout_row="3"
+                android:onClick="numericButtonClicked"
                 android:text="7" />
 
         </TableRow>
@@ -131,7 +141,8 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="2"
-                android:text="0" />
+                android:text="0"
+                android:onClick="numericButtonClicked"/>
 
             <Button
                 android:id="@+id/button1"
@@ -139,13 +150,15 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_row="29"
-                android:text="1" />
+                android:text="1"
+                android:onClick="numericButtonClicked"/>
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2" />
+                android:text="2"
+                android:onClick="numericButtonClicked"/>
 
             <Button
                 android:id="@+id/button3"
@@ -153,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="2"
                 android:layout_row="3"
+                android:onClick="numericButtonClicked"
                 android:text="3" />
 
         </TableRow>
