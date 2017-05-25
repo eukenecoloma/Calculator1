@@ -3,26 +3,26 @@ package innova4b.com.calculator;
 
 public class Calculator {
 
-    private Integer firstValue;
-    private Integer secondValue;
+    private Float firstValue;
+    private Float secondValue;
     private String operation;
 
     public Calculator() {
     }
 
-    public Integer getFirstValue() {
+    public Float getFirstValue() {
         return firstValue;
     }
 
-    public void setFirstValue(Integer firstValue) {
+    public void setFirstValue(Float firstValue) {
         this.firstValue = firstValue;
     }
 
-    public Integer getSecondValue() {
+    public Float getSecondValue() {
         return secondValue;
     }
 
-    public void setSecondValue(Integer secondValue) {
+    public void setSecondValue(Float secondValue) {
         this.secondValue = secondValue;
     }
 
@@ -34,11 +34,12 @@ public class Calculator {
         this.operation = operation;
     }
 
-    public Integer doOperation() {
-        Integer result = 0;
+    public float doOperation() {
+        float result = 0;
         switch (operation) {
             case "*": result = firstValue * secondValue; break;
             case "+": result = firstValue + secondValue; break;
+            case "/": result = firstValue / secondValue; break;
         }
         return result;
     }

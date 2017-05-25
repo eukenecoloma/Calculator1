@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity {
         String screenText = screenTextView.getText().toString();
 
         if (calculator.getOperation() == null) {
-            Integer valueFromScreen = Integer.parseInt(screenText);
+            Float valueFromScreen = Float.parseFloat(screenText);
             calculator.setFirstValue(valueFromScreen);
             calculator.setOperation(operationSymbol);
             screenTextView.setText (screenTextView.getText() + operationSymbol);
 
         } else {
             // Do the calc
-            String secondNumberStr =  screenText.substring(screenText.indexOf(operationSymbol)+1,screenText.length());
-            Integer secondNumber = Integer.parseInt(secondNumberStr);
+            String secondNumberStr =  screenText.substring(screenText.indexOf(calculator.getOperation())+1,screenText.length());
+            Float secondNumber = Float.parseFloat(secondNumberStr);
             calculator.setSecondValue(secondNumber);
-            Integer result = calculator.doOperation();
+            Float result = calculator.doOperation();
             screenTextView.setText(result.toString() + operationSymbol);
 
             calculator.setFirstValue(result);
