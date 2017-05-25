@@ -49,13 +49,19 @@ public class MainActivity extends AppCompatActivity {
             calculator.setFirstValue(valueFromScreen);
             calculator.setOperation(operationSymbol);
             screenTextView.setText (screenTextView.getText() + operationSymbol);
+
         } else {
             // Do the calc
             String secondNumberStr =  screenText.substring(screenText.indexOf(operationSymbol)+1,screenText.length());
             Integer secondNumber = Integer.parseInt(secondNumberStr);
             calculator.setSecondValue(secondNumber);
             Integer result = calculator.doOperation();
-            screenTextView.setText (result);
+            screenTextView.setText(result.toString() + operationSymbol);
+
+            calculator.setFirstValue(result);
+            calculator.setOperation(operationSymbol);
+
+
         }
 
 

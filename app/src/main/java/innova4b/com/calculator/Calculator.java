@@ -38,6 +38,7 @@ public class Calculator {
         Integer result = 0;
         switch (operation) {
             case "*": result = firstValue * secondValue; break;
+            case "+": result = firstValue + secondValue; break;
         }
         return result;
     }
